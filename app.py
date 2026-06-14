@@ -12,10 +12,9 @@ app = Flask(__name__)
 CORS(app)
 
 # API Keys
-GEMINI_API_KEY = "AIzaSyA1pPv7KG7iY7UErOwcIKdBJW8RG-ynK_s"
-GROQ_API_KEY = "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"
-OPENROUTER_API_KEY = "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"
-
+GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
+GROQ_API_KEY = os.getenv('GROQ_API_KEY')
+OPENROUTER_API_KEY = os.getenv('OPENROUTER_API_KEY')
 # Food database fallback
 FOOD_DB = {
     'roti': {'calories': 70, 'protein': 2, 'carbs': 14, 'fat': 0.5},
